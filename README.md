@@ -97,5 +97,7 @@ Schedule daily automatic updates
 📝 Author
 
 Mannat Sadana
+
 Finance + Computational Data Science Student
+
 Passionate about data engineering, analytics, and financial modeling.
