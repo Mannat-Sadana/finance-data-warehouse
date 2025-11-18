@@ -55,9 +55,17 @@ finance-data-warehouse/
 
 📈 Example Output
 
-Below is an example visualization generated from this project:
+Below are example visualizations generated from this project:
 
-AAPL Closing Price (2018–Present)
+1. AAPL Closing Price (2018–Present)
+[AAPL Closing Price](aapl_price.png)
+
+2. AAPL Daily Returns
+[AAPL Daily Returns](aapl_daily_returns.png)
+
+3. AAPL 20-Day Rolling Volatility
+[AAPL Volatility](aapl_volatility.png)
+
 
 
 🧠 How It Works

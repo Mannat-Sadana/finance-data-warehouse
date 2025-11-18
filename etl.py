@@ -76,6 +76,10 @@ def load_prices_for_ticker(conn, symbol, start="2018-01-01"):
     ticker_id = row[0]
     df["ticker_id"] = ticker_id
 
+    # Remove existing rows for this ticker so we don't duplicate on rerun
+    cur.execute("DELETE FROM daily_prices WHERE ticker_id = ?", (ticker_id,))
+    conn.commit()
+
     # Keep only the columns that match daily_prices, and flatten column names
     df = df[
         [
@@ -111,7 +115,7 @@ def main():
     conn = create_tables()
 
     # B: Tickers you care about (you can add more later)
-    symbols = ["AAPL"]
+    symbols = ["AAPL", "MSFT", "AMZN", "GOOGL", "META"]
 
     # C: insert tickers
     insert_tickers(conn, symbols)
